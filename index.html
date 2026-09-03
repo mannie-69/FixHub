@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FixHub | Got a Problem? Let's Fix It.</title>
+
+    <meta
+        name="description"
+        content="FixHub helps you diagnose technology, electrical, network, software and home problems."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="header" id="header">
+    <nav class="navbar container">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-wrench"></i>
+            </span>
+            <span>Fix<span>Hub</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#solver" class="nav-link">Problem Solver</a>
+            <a href="#guides" class="nav-link">Fix It Yourself</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+            <a href="#request" class="nav-button">
+                Get Help
+            </a>
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-text reveal">
+
+            <span class="eyebrow">
+                <i class="fa-solid fa-circle-check"></i>
+                Simple solutions. Real results.
+            </span>
+
+            <h1>
+                Got a Problem?
+                <span>Let's Fix It.</span>
+            </h1>
+
+            <p>
+                From computers and phones to electrical, network,
+                software and home problems, FixHub helps you understand
+                what's wrong and find the right solution.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#solver" class="btn btn-primary">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Find a Solution
+                </a>
+
+                <a href="#request" class="btn btn-light">
+                    <i class="fa-solid fa-headset"></i>
+                    Get Professional Help
+                </a>
+
+            </div>
+
+            <div class="hero-trust">
+
+                <div>
+                    <strong>5+</strong>
+                    <span>Service Areas</span>
+                </div>
+
+                <div>
+                    <strong>24/7</strong>
+                    <span>Request Access</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Problem Focused</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card reveal">
+
+            <div class="hero-card-top">
+                <span class="status-dot"></span>
+                FixHub Assistant
+            </div>
+
+            <h3>What seems to be wrong?</h3>
+
+            <p>
+                Tell us about your problem and we'll point you
+                in the right direction.
+            </p>
+
+            <button class="mini-problem" data-problem="My laptop is very slow">
+                <i class="fa-solid fa-laptop"></i>
+                My laptop is slow
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <button class="mini-problem" data-problem="My Wi-Fi is not working">
+                <i class="fa-solid fa-wifi"></i>
+                My Wi-Fi isn't working
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <button class="mini-problem" data-problem="My phone is having problems">
+                <i class="fa-solid fa-mobile-screen"></i>
+                My phone has a problem
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-section">
+
+    <div class="container">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="globalSearch"
+                placeholder="What problem are you having? e.g. laptop is slow..."
+            >
+
+            <button id="searchButton">
+                Search
+            </button>
+
+        </div>
+
+        <div id="searchResults" class="search-results"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section services-section" id="services">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">OUR SERVICES</span>
+
+            <h2>
+                Whatever the problem,
+                <span>we'll find a way forward.</span>
+            </h2>
+
+            <p>
+                Explore the areas where FixHub can help you diagnose,
+                troubleshoot or get professional assistance.
+            </p>
+
+        </div>
+
+
+        <div class="service-filters reveal">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="technology">
+                Technology
+            </button>
+
+            <button class="filter-btn" data-filter="electrical">
+                Electrical
+            </button>
+
+            <button class="filter-btn" data-filter="network">
+                Network
+            </button>
+
+            <button class="filter-btn" data-filter="software">
+                Software
+            </button>
+
+            <button class="filter-btn" data-filter="home">
+                Home
+            </button>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <article class="service-card reveal" data-category="technology">
+
+                <div class="service-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=900&q=80"
+                        alt="Computer repair"
+                    >
+                </div>
+
+                <div class="service-content">
+
+                    <span class="service-icon">
+                        <i class="fa-solid fa-laptop"></i>
+                    </span>
+
+                    <h3>Computer & Laptop</h3>
+
+                    <p>
+                        Slow computers, startup problems, overheating,
+                        display issues and hardware troubleshooting.
+                    </p>
+
+                    <button class="service-link" data-category="technology">
+                        Diagnose Problem
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal" data-category="technology">
+
+                <div class="service-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80"
+                        alt="Smartphone"
+                    >
+                </div>
+
+                <div class="service-content">
+
+                    <span class="service-icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </span>
+
+                    <h3>Phone Problems</h3>
+
+                    <p>
+                        Battery, storage, charging, software, screen
+                        and performance problems.
+                    </p>
+
+                    <button class="service-link" data-category="technology">
+                        Diagnose Problem
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal" data-category="electrical">
+
+                <div class="service-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80"
+                        alt="Electrical repair"
+                    >
+                </div>
+
+                <div class="service-content">
+
+                    <span class="service-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </span>
+
+                    <h3>Electrical Issues</h3>
+
+                    <p>
+                        Problems with lights, switches, sockets,
+                        power connections and electrical equipment.
+                    </p>
+
+                    <button class="service-link" data-category="electrical">
+                        Diagnose Problem
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal" data-category="network">
+
+                <div class="service-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80"
+                        alt="Wi-Fi router"
+                    >
+                </div>
+
+                <div class="service-content">
+
+                    <span class="service-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </span>
+
+                    <h3>Wi-Fi & Network</h3>
+
+                    <p>
+                        Internet connection problems, weak Wi-Fi,
+                        router issues and network configuration.
+                    </p>
+
+                    <button class="service-link" data-category="network">
+                        Diagnose Problem
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal" data-category="software">
+
+                <div class="service-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80"
+                        alt="Programming code"
+                    >
+                </div>
+
+                <div class="service-content">
+
+                    <span class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+
+                    <h3>Software & Websites</h3>
+
+                    <p>
+                        Website errors, software problems, installation,
+                        coding and basic technical support.
+                    </p>
+
+                    <button class="service-link" data-category="software">
+                        Diagnose Problem
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-card reveal" data-category="home">
+
+                <div class="service-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
+                        alt="Home repair"
+                    >
+                </div>
+
+                <div class="service-content">
+
+                    <span class="service-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+
+                    <h3>Home Repairs</h3>
+
+                    <p>
+                        Get help understanding common household
+                        maintenance and repair problems.
+                    </p>
+
+                    <button class="service-link" data-category="home">
+                        Diagnose Problem
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SMART PROBLEM SOLVER ================= -->
+
+<section class="section solver-section" id="solver">
+
+    <div class="container">
+
+        <div class="solver-wrapper reveal">
+
+            <div class="solver-intro">
+
+                <span class="section-label">SMART PROBLEM SOLVER</span>
+
+                <h2>
+                    Let's figure out
+                    <span>what's wrong.</span>
+                </h2>
+
+                <p>
+                    Select the type of problem you're experiencing.
+                    FixHub will give you some basic troubleshooting
+                    steps and let you request professional help.
+                </p>
+
+                <div class="solver-note">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>
+                        These suggestions are for basic troubleshooting.
+                        Don't attempt dangerous electrical repairs yourself.
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="solver-box">
+
+                <label for="problemCategory">
+                    What type of problem do you have?
+                </label>
+
+                <select id="problemCategory">
+
+                    <option value="">
+                        Select a category
+                    </option>
+
+                    <option value="computer">
+                        Computer / Laptop
+                    </option>
+
+                    <option value="phone">
+                        Phone
+                    </option>
+
+                    <option value="network">
+                        Wi-Fi / Network
+                    </option>
+
+                    <option value="electrical">
+                        Electrical
+                    </option>
+
+                    <option value="software">
+                        Software / Website
+                    </option>
+
+                    <option value="home">
+                        Home
+                    </option>
+
+                </select>
+
+
+                <label for="problemSelect">
+                    What is happening?
+                </label>
+
+                <select id="problemSelect" disabled>
+
+                    <option value="">
+                        Choose a problem
+                    </option>
+
+                </select>
+
+
+                <button class="btn btn-primary full-width" id="solveProblem">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Find Possible Solution
+
+                </button>
+
+
+                <div id="solutionResult" class="solution-result"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EMERGENCY ================= -->
+
+<section class="emergency-section">
+
+    <div class="container">
+
+        <div class="emergency-box reveal">
+
+            <div class="emergency-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+
+            <div class="emergency-content">
+
+                <span>NEED HELP NOW?</span>
+
+                <h2>
+                    Is the problem urgent?
+                </h2>
+
+                <p>
+                    Tell FixHub what is happening and we'll help you
+                    decide what to do next.
+                </p>
+
+            </div>
+
+            <a href="#request" class="btn btn-light">
+                Request Urgent Help
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FIX IT YOURSELF ================= -->
+
+<section class="section guides-section" id="guides">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">FIX IT YOURSELF</span>
+
+            <h2>
+                Try a quick fix
+                <span>before calling for help.</span>
+            </h2>
+
+            <p>
+                Simple guides for common problems. If these don't work,
+                you can request professional assistance.
+            </p>
+
+        </div>
+
+
+        <div class="guides-grid">
+
+            <article class="guide-card reveal" data-guide="laptop">
+
+                <div class="guide-icon">
+                    <i class="fa-solid fa-laptop"></i>
+                </div>
+
+                <h3>Laptop is slow</h3>
+
+                <p>
+                    A few things you can check before taking your
+                    computer to a technician.
+                </p>
+
+                <button class="guide-button">
+                    View Fix
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="guide-details">
+
+                    <ol>
+                        <li>Restart the laptop.</li>
+                        <li>Close programs you aren't using.</li>
+                        <li>Check how much storage is available.</li>
+                        <li>Open Task Manager and check CPU/RAM usage.</li>
+                        <li>Run a trusted security scan.</li>
+                    </ol>
+
+                    <strong>
+                        If the problem continues, request professional help.
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="guide-card reveal" data-guide="phone">
+
+                <div class="guide-icon">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+
+                <h3>Phone storage is full</h3>
+
+                <p>
+                    Free up space and improve your phone's performance.
+                </p>
+
+                <button class="guide-button">
+                    View Fix
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="guide-details">
+
+                    <ol>
+                        <li>Open your phone's storage settings.</li>
+                        <li>Remove unnecessary large videos.</li>
+                        <li>Delete unused applications.</li>
+                        <li>Clear unnecessary downloads.</li>
+                        <li>Back up important files before deleting them.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+
+            <article class="guide-card reveal" data-guide="wifi">
+
+                <div class="guide-icon">
+                    <i class="fa-solid fa-wifi"></i>
+                </div>
+
+                <h3>Wi-Fi keeps disconnecting</h3>
+
+                <p>
+                    Try these basic steps when your internet connection
+                    keeps dropping.
+                </p>
+
+                <button class="guide-button">
+                    View Fix
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="guide-details">
+
+                    <ol>
+                        <li>Restart the router.</li>
+                        <li>Move closer to the router.</li>
+                        <li>Forget and reconnect to the Wi-Fi network.</li>
+                        <li>Check whether other devices have the same issue.</li>
+                        <li>Contact your internet provider if necessary.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+
+            <article class="guide-card reveal" data-guide="windows">
+
+                <div class="guide-icon">
+                    <i class="fa-brands fa-windows"></i>
+                </div>
+
+                <h3>Windows is frozen</h3>
+
+                <p>
+                    Try these safe steps if your computer stops responding.
+                </p>
+
+                <button class="guide-button">
+                    View Fix
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="guide-details">
+
+                    <ol>
+                        <li>Wait a few seconds to see if it responds.</li>
+                        <li>Try Ctrl + Shift + Esc.</li>
+                        <li>Close the program that is not responding.</li>
+                        <li>Restart Windows if necessary.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+
+            <article class="guide-card reveal" data-guide="website">
+
+                <div class="guide-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <h3>Website isn't loading</h3>
+
+                <p>
+                    Check your connection and browser before assuming
+                    the website is broken.
+                </p>
+
+                <button class="guide-button">
+                    View Fix
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="guide-details">
+
+                    <ol>
+                        <li>Refresh the page.</li>
+                        <li>Check your internet connection.</li>
+                        <li>Try another browser.</li>
+                        <li>Clear browser cache if necessary.</li>
+                        <li>Check whether other websites work.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+
+            <article class="guide-card reveal" data-guide="power">
+
+                <div class="guide-icon">
+                    <i class="fa-solid fa-plug"></i>
+                </div>
+
+                <h3>Socket or light problem</h3>
+
+                <p>
+                    Basic checks you can make without opening electrical
+                    wiring or equipment.
+                </p>
+
+                <button class="guide-button">
+                    View Safety Guide
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="guide-details">
+
+                    <ol>
+                        <li>Check whether there is power in the building.</li>
+                        <li>Check the breaker only if it is safe to do so.</li>
+                        <li>Try another appliance in the socket.</li>
+                        <li>Do not touch exposed wires.</li>
+                        <li>Contact a qualified electrician for electrical faults.</li>
+                    </ol>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REQUEST ================= -->
+
+<section class="section request-section" id="request">
+
+    <div class="container">
+
+        <div class="request-wrapper">
+
+            <div class="request-info reveal">
+
+                <span class="section-label">GET PROFESSIONAL HELP</span>
+
+                <h2>
+                    Tell us what's
+                    <span>going wrong.</span>
+                </h2>
+
+                <p>
+                    Fill out the form and FixHub will prepare your request.
+                    You can send it directly to us through WhatsApp.
+                </p>
+
+                <div class="contact-points">
+
+                    <div>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp Support</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>09154480532</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>emmanueleyo@fixhub.com</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form id="problemForm" class="request-form reveal">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="userName">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="userName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="userPhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="userPhone"
+                            placeholder="e.g. 08012345678"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="requestCategory">
+                            Problem Category
+                        </label>
+
+                        <select id="requestCategory" required>
+
+                            <option value="">
+                                Select category
+                            </option>
+
+                            <option>Technology</option>
+                            <option>Electrical</option>
+                            <option>Network</option>
+                            <option>Software</option>
+                            <option>Home</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="userLocation">
+                            Your Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="userLocation"
+                            placeholder="e.g. Uyo"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="urgency">
+                        How urgent is it?
+                    </label>
+
+                    <select id="urgency">
+
+                        <option>Normal</option>
+                        <option>Urgent</option>
+                        <option>Emergency</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="problemDescription">
+                        Describe the problem
+                    </label>
+
+                    <textarea
+                        id="problemDescription"
+                        rows="6"
+                        placeholder="Tell us exactly what is happening..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="btn btn-primary full-width">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Send Request on WhatsApp
+
+                </button>
+
+                <p class="form-note">
+                    Your request will open in WhatsApp so you can review
+                    it before sending.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section about-section" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1000&q=80"
+                    alt="Technician working"
+                >
+
+                <div class="experience-card">
+
+                    <strong>Fix</strong>
+
+                    <span>
+                        problems with confidence.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content reveal">
+
+                <span class="section-label">ABOUT FIXHUB</span>
+
+                <h2>
+                    Technology should
+                    <span>make life easier.</span>
+                </h2>
+
+                <p>
+                    FixHub is designed to make technical problems
+                    easier to understand. Instead of simply asking
+                    "Who can fix this?", you can first understand
+                    what might be happening.
+                </p>
+
+                <p>
+                    Whether you need a quick troubleshooting guide or
+                    professional assistance, FixHub puts the next step
+                    in one place.
+                </p>
+
+
+                <div class="about-features">
+
+                    <div>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Easy troubleshooting</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Problem-focused support</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Professional assistance</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Simple request process</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="section testimonials-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">WHAT PEOPLE SAY</span>
+
+            <h2>
+                Problems are easier
+                <span>when you're not alone.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="testimonial-slider reveal">
+
+            <div class="testimonial-track" id="testimonialTrack">
+
+                <article class="testimonial">
+
+                    <div class="quote-icon">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <p>
+                        "The idea is simple but useful. Instead of
+                        immediately looking for a technician, I can
+                        first understand what might be wrong."
+                    </p>
+
+                    <div class="testimonial-user">
+                        <div class="avatar">A</div>
+
+                        <div>
+                            <strong>Alex</strong>
+                            <span>FixHub User</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="testimonial">
+
+                    <div class="quote-icon">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <p>
+                        "I like that the website doesn't make technical
+                        problems feel complicated."
+                    </p>
+
+                    <div class="testimonial-user">
+                        <div class="avatar">M</div>
+
+                        <div>
+                            <strong>Manny</strong>
+                            <span>FixHub User</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="testimonial">
+
+                    <div class="quote-icon">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+
+                    <p>
+                        "The troubleshooting guides are a good first
+                        step before asking someone for help."
+                    </p>
+
+                    <div class="testimonial-user">
+                        <div class="avatar">J</div>
+
+                        <div>
+                            <strong>James</strong>
+                            <span>FixHub User</span>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="slider-controls">
+
+                <button id="prevTestimonial">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <div class="slider-dots" id="sliderDots"></div>
+
+                <button id="nextTestimonial">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="section faq-section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">FAQ</span>
+
+            <h2>
+                Questions?
+                <span>We've got answers.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="faq-list">
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    What is FixHub?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        FixHub is a problem-solving platform designed
+                        to help people understand common technical,
+                        electrical, network, software and home problems.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    Can FixHub fix my problem remotely?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Some problems can be solved through remote
+                        troubleshooting. For physical problems,
+                        FixHub can help you request professional assistance.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    Do I have to be a technical person?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        No. FixHub is designed to explain problems
+                        in simple language and guide you through
+                        basic troubleshooting.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    What if the suggested fix doesn't work?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        You can submit a professional help request
+                        through the request form and contact FixHub
+                        through WhatsApp.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    Is electrical troubleshooting safe?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Only basic checks should be attempted by users.
+                        Never touch exposed wires or open electrical
+                        equipment if you are not qualified. Contact
+                        a qualified electrician for dangerous faults.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT CTA ================= -->
+
+<section class="contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box reveal">
+
+            <div>
+
+                <span class="section-label">
+                    HAVE A PROBLEM?
+                </span>
+
+                <h2>
+                    Let's get it
+                    <span>sorted.</span>
+                </h2>
+
+                <p>
+                    Don't know where to start? That's exactly why
+                    FixHub exists.
+                </p>
+
+            </div>
+
+            <a href="#request" class="btn btn-light">
+                Start a Request
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-wrench"></i>
+                    </span>
+                    <span>Fix<span>Hub</span></span>
+                </a>
+
+                <p>
+                    Helping you understand problems,
+                    find solutions and get the right help.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" data-social="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" data-social="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" data-social="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a
+                        href="https://wa.me/2349154480532"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <a href="#services">Services</a>
+                <a href="#solver">Problem Solver</a>
+                <a href="#guides">Fix It Yourself</a>
+                <a href="#about">About Us</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Services</h3>
+
+                <a href="#services">Technology</a>
+                <a href="#services">Electrical</a>
+                <a href="#services">Network</a>
+                <a href="#services">Software</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <a href="tel:09154480532">
+                    09154480532
+                </a>
+
+                <a href="mailto:emmanueleyo@fixhub.com">
+                    emmanueleyo@fixhub.com
+                </a>
+
+                <a
+                    href="https://wa.me/2349154480532"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span> FixHub.
+                All rights reserved.
+            </p>
+
+            <p>
+                Built to solve problems.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="backToTop" class="back-to-top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<!-- ================= TOAST ================= -->
+
+<div id="toast" class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Done!
+    </span>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
