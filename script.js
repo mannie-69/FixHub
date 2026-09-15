@@ -4,6 +4,30 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    /* ================= SUPABASE AUTHENTICATION ================= */
+    const SUPABASE_URL = "https://lriyrlwzokgnpjdvsxrs.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxyaXlybHd6b2tnbnBqZHZzeHJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk0ODMzMDksImV4cCI6MjEwNTA1OTMwOX0.Q0hRuOgq4V1CgdPNldDeK1cs6zCsi9gCDrdjjJDHqRE";
+    const authScreen=document.getElementById("authScreen"), appShell=document.getElementById("appShell"), signInForm=document.getElementById("signInForm"), registerForm=document.getElementById("registerForm"), authMessage=document.getElementById("authMessage");
+    const profileButton=document.getElementById("profileButton"), profileMenu=document.getElementById("profileMenu"), profileArea=document.getElementById("profileArea"), logoutButton=document.getElementById("logoutButton");
+    let supabaseClient=null;
+    if(window.supabase && SUPABASE_URL!=="YOUR_SUPABASE_PROJECT_URL" && SUPABASE_ANON_KEY!=="YOUR_SUPABASE_ANON_KEY") supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+    function showAuthMessage(message,type="error"){authMessage.textContent=message;authMessage.className=`auth-message ${type}`;}
+    function switchAuthTab(tab){document.querySelectorAll(".auth-tab").forEach(b=>b.classList.toggle("active",b.dataset.authTab===tab));signInForm.classList.toggle("active",tab==="signin");registerForm.classList.toggle("active",tab==="register");authMessage.textContent="";authMessage.className="auth-message";}
+    document.querySelectorAll("[data-auth-tab]").forEach(b=>b.addEventListener("click",()=>switchAuthTab(b.dataset.authTab)));
+    function displayName(user){return user?.user_metadata?.full_name||user?.email?.split("@")[0]||"FixHub User";}
+    function updateProfile(user){const name=displayName(user),initial=name.trim().charAt(0).toUpperCase()||"U";document.getElementById("profileName").textContent=name.split(" ")[0];document.getElementById("profileFullName").textContent=name;document.getElementById("profileEmail").textContent=user.email||"Signed in";document.getElementById("profileAvatar").textContent=initial;document.getElementById("profileAvatarMenu").textContent=initial;const n=document.getElementById("userName");if(n&&!n.value)n.value=name;}
+    function showApp(user){updateProfile(user);authScreen.classList.add("hidden");appShell.classList.add("authenticated");document.body.classList.remove("auth-active");}
+    function showLogin(){appShell.classList.remove("authenticated");authScreen.classList.remove("hidden");document.body.classList.add("auth-active");switchAuthTab("signin");}
+    async function checkAuthentication(){if(!supabaseClient){showAuthMessage("Supabase is not connected yet. Add your Project URL and anon key in script.js.");return;}const {data,error}=await supabaseClient.auth.getSession();if(error){showAuthMessage("We couldn't check your account. Please try again.");return;}if(data.session?.user)showApp(data.session.user);else showLogin();supabaseClient.auth.onAuthStateChange((event,session)=>{if(session?.user)showApp(session.user);else if(event==="SIGNED_OUT")showLogin();});}
+    signInForm.addEventListener("submit",async e=>{e.preventDefault();if(!supabaseClient){showAuthMessage("Supabase is not connected yet. Add your Project URL and anon key in script.js.");return;}const email=document.getElementById("signInEmail").value.trim(),password=document.getElementById("signInPassword").value,b=signInForm.querySelector(".auth-submit");b.disabled=true;b.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Signing In...';const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});b.disabled=false;b.innerHTML='<i class="fa-solid fa-right-to-bracket"></i> Sign In';if(error){showAuthMessage("Wrong email or password. Please try again.");return;}if(data.user){showAuthMessage("Welcome back!","success");setTimeout(()=>showApp(data.user),250);}});
+    registerForm.addEventListener("submit",async e=>{e.preventDefault();if(!supabaseClient){showAuthMessage("Supabase is not connected yet. Add your Project URL and anon key in script.js.");return;}const name=document.getElementById("registerName").value.trim(),email=document.getElementById("registerEmail").value.trim(),password=document.getElementById("registerPassword").value,confirm=document.getElementById("registerConfirmPassword").value,b=registerForm.querySelector(".auth-submit");if(password!==confirm){showAuthMessage("Passwords do not match. Please try again.");return;}b.disabled=true;b.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Creating Account...';const {data,error}=await supabaseClient.auth.signUp({email,password,options:{data:{full_name:name}}});b.disabled=false;b.innerHTML='<i class="fa-solid fa-user-plus"></i> Create Account';if(error){showAuthMessage(error.message);return;}if(data.session?.user){showAuthMessage("Account created successfully!","success");setTimeout(()=>showApp(data.session.user),250);}else{registerForm.reset();showAuthMessage("Account created. Check your email to confirm your account, then sign in.","success");}});
+    profileButton.addEventListener("click",e=>{e.stopPropagation();const open=profileMenu.classList.toggle("open");profileButton.setAttribute("aria-expanded",open);});
+    document.addEventListener("click",e=>{if(profileArea&&!profileArea.contains(e.target)){profileMenu.classList.remove("open");profileButton.setAttribute("aria-expanded","false");}});
+    document.getElementById("profileDetails").addEventListener("click",()=>showToast("Your FixHub account is active."));
+    logoutButton.addEventListener("click",async()=>{if(!supabaseClient)return;const {error}=await supabaseClient.auth.signOut();if(error){showToast("Could not log out. Please try again.");return;}profileMenu.classList.remove("open");showLogin();});
+    checkAuthentication();
+
+
     /* =====================================================
        ELEMENTS
     ===================================================== */
